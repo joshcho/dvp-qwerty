@@ -15,9 +15,9 @@ By me:
 * [xdq.c](unix/xdq.c) - Implements DQ on X (Unix/Linux) using X Grabs. See comments at top of file for instructions. **WARNING:** This doesn't work on Wayland, which many distros are moving to as of late 2017. It's also pretty hacky due to the nature of X grabs.
 * [dvorak-qwerty.stp](unix/dvorak-qwerty.stp) - Implements DQ on Linux by [monkey-patching the kernel using SystemTap](https://blog.cloudflare.com/how-to-monkey-patch-the-linux-kernel/). This is totally nuts but it works and ultimately is way cleaner than xdq.c.
 
-By others (*I have not tested these*):
+By others:
 
-* [Thomas Bocek's implementation](https://github.com/tbocek/dvorak) using Linux's `/dev/uinput` and `EVIOCGRAB`. This looks similar to my SystemTap-based implementation, without injecting code into kernelspace.
+* [Thomas Bocek's implementation](https://github.com/tbocek/dvorak) using Linux's `/dev/uinput` and `EVIOCGRAB`. This looks similar to my SystemTap-based implementation, without injecting code into kernelspace. *This is the implementation I now use day-to-day. It works better and is easier to manage than any of my own implementations.*
 
 ### Windows
 
